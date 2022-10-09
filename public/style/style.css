@@ -86,7 +86,7 @@ button span.badge:hover, button span.badge:active {
   background-color: #92320c;
 }
 
-.cart-items {
+ul.cart-items {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -94,7 +94,7 @@ button span.badge:hover, button span.badge:active {
   overflow: auto;
 }
 
-.total {
+div.total {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -109,11 +109,11 @@ button span.badge:hover, button span.badge:active {
   margin: 1rem 0;
 }
 
-.actions {
+div.actions {
   text-align: right;
 }
 
-.actions button {
+div.actions button {
   font: inherit;
   cursor: pointer;
   background-color: transparent;
@@ -123,18 +123,13 @@ button span.badge:hover, button span.badge:active {
   margin-left: 1rem;
 }
 
-.actions button:hover,
-.actions button:active {
+div.actions button:hover, div.actions button:active {
   background-color: #5a1a01;
   border-color: #5a1a01;
   color: white;
 }
 
-.actions .button--alt {
-  color: #8a2b06;
-}
-
-.actions .button {
+div.actions button.button {
   background-color: #8a2b06;
   color: white;
 }
@@ -238,7 +233,7 @@ section.meals ul {
   padding: 0;
 }
 
-.meal {
+li.meal {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -250,15 +245,15 @@ section.meals ul {
   border-bottom: 1px solid #ccc;
 }
 
-.meal div h3 {
+li.meal div h3 {
   margin: 0 0 0.25rem 0;
 }
 
-.meal div div.description {
+li.meal div div.description {
   font-style: italic;
 }
 
-.meal div div.price {
+li.meal div div.price {
   margin-top: 0.25rem;
   font-weight: bold;
   color: #8a2b06;
@@ -327,6 +322,64 @@ div.input input {
     opacity: 0;
     -webkit-transform: translateY(3rem);
             transform: translateY(3rem);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+div.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+div.modal {
+  position: fixed;
+  top: 20vh;
+  left: 5%;
+  width: 90%;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 14px;
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  z-index: 30;
+  -webkit-animation: slide-down 300ms ease-out forwards;
+          animation: slide-down 300ms ease-out forwards;
+}
+
+@media (min-width: 768px) {
+  .modal {
+    width: 40rem;
+    left: calc(50% - 20rem);
+  }
+}
+
+@-webkit-keyframes slide-down {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-3rem);
+            transform: translateY(-3rem);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-3rem);
+            transform: translateY(-3rem);
   }
   to {
     opacity: 1;
