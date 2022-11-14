@@ -3,35 +3,37 @@ import Card from "../UI/Card";
 import Mealitem from "../Meals/MealItem/Mealitem";
 import classes from "../style.css/AvailableMeals.module.css";
 
-const DUMMY_MEALS = [
+const MEALS = [
   {
     id: "m1",
-    name: "Sushi",
-    description: "Finest fish and veggies",
-    price: 22.99,
+    name: "APPLE PIE PANCAKES",
+    description:
+      "two pancakes, apple pie filling, caramel, cinnamon, whipped cream.",
+    price: 14.99,
   },
   {
     id: "m2",
-    name: "Schnitzel",
-    description: "A german specialty!",
-    price: 16.5,
+    name: "FARMHOUSE",
+    description:
+      "eggs, Hickory House bacon, American cheese, toasted sourdough bread.",
+    price: 16.59,
   },
   {
     id: "m3",
-    name: "Barbecue Burger",
-    description: "American, raw, meaty",
+    name: "HAM & CHEESE",
+    description: "three eggs, ham, cheddar cheese.",
     price: 12.99,
   },
   {
     id: "m4",
-    name: "Green Bowl",
-    description: "Healthy...and green...",
-    price: 18.99,
+    name: "BRIOCHE FRENCH TOAST",
+    description: "two pieces of brioche French toast, butter, syrup.",
+    price: 10.99,
   },
 ];
 
 const Available = () => {
-  const item = DUMMY_MEALS.map((item) => (
+  const item = MEALS.map((item) => (
     <Mealitem
       id={item.id}
       key={item.id}
