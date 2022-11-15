@@ -5,7 +5,7 @@
   margin: auto;
   margin-top: -10rem;
   position: relative;
-  background-color: #fec99c;
+  background-color: #f3cd97;
   color: #d1521f;
   border-radius: 14px;
   padding: 1rem;
@@ -15,7 +15,6 @@
 .summary h2 {
   font-size: 2rem;
   margin-top: 0;
-  color: #8a2b06;
 }
 
 .summary p {
