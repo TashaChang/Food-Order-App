@@ -9,3 +9,7 @@ Built with React.
 - View items & total amount inside the cart
 
 - Change amount or items from the cart
+
+#### optimization:
+
+- The order button is not available so far, it will be added in future.

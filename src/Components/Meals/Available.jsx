@@ -9,26 +9,26 @@ const MEALS = [
     name: "APPLE PIE PANCAKES",
     description:
       "two pancakes, apple pie filling, caramel, cinnamon, whipped cream.",
-    price: 14.99,
+    price: 14,
   },
   {
     id: "m2",
     name: "FARMHOUSE",
     description:
       "eggs, Hickory House bacon, American cheese, toasted sourdough bread.",
-    price: 16.59,
+    price: 16,
   },
   {
     id: "m3",
     name: "HAM & CHEESE",
     description: "three eggs, ham, cheddar cheese.",
-    price: 12.99,
+    price: 12,
   },
   {
     id: "m4",
     name: "BRIOCHE FRENCH TOAST",
     description: "two pieces of brioche French toast, butter, syrup.",
-    price: 10.99,
+    price: 10,
   },
 ];
 
