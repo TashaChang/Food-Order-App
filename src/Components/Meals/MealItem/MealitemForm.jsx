@@ -14,7 +14,7 @@ const MealitemForm = (props) => {
     if (
       enteredAmount.trim().length === 0 ||
       enteredAmountNumber < 1 ||
-      enteredAmountNumber > 5
+      enteredAmountNumber > 10
     ) {
       setIsvaild(false);
       return;
@@ -29,14 +29,14 @@ const MealitemForm = (props) => {
         input={{
           id: "amount_" + props.id,
           type: "number",
-          min: "0",
+          min: "1",
           max: "10",
           step: "1",
           defaultValue: "1",
         }}
       />
       <button>+ Add</button>
-      {!isVaild && <p>Please enter a vaild amount. (1~5)</p>}
+      {!isVaild && <p>Please enter a vaild amount.(1~10)</p>}
     </form>
   );
 };
